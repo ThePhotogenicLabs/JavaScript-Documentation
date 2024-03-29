@@ -59,3 +59,19 @@ let students = {
 for (let key in students) {
   console.log("Key =", key, "value = ", students[key]);
 }
+
+// Print all even numbers from 0 to 100
+
+for (let num = 0; num <= 100; num++) {
+  if (num % 2 === 0) {
+    // even number
+
+    console.log("Number =", num);
+  }
+
+  // if (num % 2 !== 0) {
+  //   // odd number
+
+  //   console.log("Number =", num);
+  // }
+}
