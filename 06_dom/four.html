@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Course</title>
+  </head>
+  <body style="background-color: #212121; color: #ffff">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    // Add Value
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      const language = document.querySelector(".language");
+      language.appendChild(li);
+    }
+
+    addLanguage("Python");
+    addLanguage("TypeScript");
+
+    function addOptimizedLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptimizedLanguage("GoLang");
+
+    // Edit Value 2
+    const secondLanguage = document.querySelector("li:nth-child(2)");
+    // secondLanguage.innerHTML = "Mojo"
+    const newli = document.createElement("li");
+    newli.textContent = "Mojo";
+    secondLanguage.replaceWith(newli);
+
+    // Edit Value 1
+    const firstLanguage = document.querySelector("li:first-child");
+    firstLanguage.outerHTML = "<li>TypeScript</li>";
+
+    // Remove Value
+    const lastLanguage = document.querySelector("li:last-child");
+    lastLanguage.remove();
+  </script>
+</html>
